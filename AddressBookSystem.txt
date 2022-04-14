@@ -65,3 +65,20 @@ mysql> select * from addressbook;
 |  1 | nikita    | chougule | sangli  | sangli | maharastra | 5456 | 45789621    | abc@gmail.com |
 +----+-----------+----------+---------+--------+------------+------+-------------+---------------+
 1 row in set (0.03 sec)
+
+mysql> select * from addressbook;
++----+-----------+----------+----------+----------+------------+------+---------
+----+----------------+
+| ID | firstName | lastName | address  | city     | state      | zip  | phoneNum
+ber | email          |
++----+-----------+----------+----------+----------+------------+------+---------
+----+----------------+
+|  1 | nikita    | chougule | sangli   | sangli   | maharastra | 5456 | 45789621
+    | abc@gmail.com  |
+|  2 | amu       | patil    | pune     | satara   | maharastra | 5546 | 9879891
+    | amu@gmail.com  |
+|  3 | neha      | chougule | kolhapur | kolhapur | maharastra | 5031 | 54879891
+    | neha@gmail.com |
++----+-----------+----------+----------+----------+------------+------+---------
+----+----------------+
+3 rows in set (0.04 sec)
