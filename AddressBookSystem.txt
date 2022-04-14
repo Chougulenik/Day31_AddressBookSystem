@@ -54,3 +54,14 @@ mysql> desc addressbook;
 | email       | varchar(50) | NO   |     | NULL    |                |
 +-------------+-------------+------+-----+---------+----------------+
 9 rows in set (0.18 sec)
+
+mysql> insert into addressbook (firstName,lastName,address,city,state,zip,phoneNumber,email) values('nikita','chougule','sangli','sangli','maharastra','5456','45789621','abc@gmail.com');
+Query OK, 1 row affected (0.34 sec)
+
+mysql> select * from addressbook;
++----+-----------+----------+---------+--------+------------+------+-------------+---------------+
+| ID | firstName | lastName | address | city   | state      | zip  | phoneNumber | email         |
++----+-----------+----------+---------+--------+------------+------+-------------+---------------+
+|  1 | nikita    | chougule | sangli  | sangli | maharastra | 5456 | 45789621    | abc@gmail.com |
++----+-----------+----------+---------+--------+------------+------+-------------+---------------+
+1 row in set (0.03 sec)
