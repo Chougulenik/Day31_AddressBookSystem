@@ -113,3 +113,12 @@ mysql> select * from addressbook where city = 'satara';
 +----+-----------+----------+---------+--------+------------+------+------------
 -+---------------+
 1 row in set (0.00 sec)
+
+mysql> select city, Count(firstName) from addressbook group by city;
++--------+------------------+
+| city   | Count(firstName) |
++--------+------------------+
+| sangli |                1 |
+| satara |                1 |
++--------+------------------+
+2 rows in set (0.14 sec)
