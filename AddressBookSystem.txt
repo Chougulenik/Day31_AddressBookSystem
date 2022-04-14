@@ -38,3 +38,19 @@ Database changed
 mysql> create table addressbook (ID int not null auto_increment, firstName varchar(50) not null, lastName varchar(50) not null, address varchar(80) not null, city varchar(50) not null, state v
 archar(90) not null, zip varchar(15) not null, phoneNumber varchar(20) not null, email varchar(50) not null, primary key(ID));
 Query OK, 0 rows affected (5.61 sec)
+
+mysql> desc addressbook;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| ID          | int         | NO   | PRI | NULL    | auto_increment |
+| firstName   | varchar(50) | NO   |     | NULL    |                |
+| lastName    | varchar(50) | NO   |     | NULL    |                |
+| address     | varchar(80) | NO   |     | NULL    |                |
+| city        | varchar(50) | NO   |     | NULL    |                |
+| state       | varchar(90) | NO   |     | NULL    |                |
+| zip         | varchar(15) | NO   |     | NULL    |                |
+| phoneNumber | varchar(20) | NO   |     | NULL    |                |
+| email       | varchar(50) | NO   |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+9 rows in set (0.18 sec)
