@@ -122,3 +122,16 @@ mysql> select city, Count(firstName) from addressbook group by city;
 | satara |                1 |
 +--------+------------------+
 2 rows in set (0.14 sec)
+
+mysql> select * from addressbook where city = 'satara' ORDER BY firstName ASC;
++----+-----------+----------+---------+--------+------------+------+------------
+-+---------------+
+| ID | firstName | lastName | address | city   | state      | zip  | phoneNumber
+ | email         |
++----+-----------+----------+---------+--------+------------+------+------------
+-+---------------+
+|  2 | amu       | patil    | pune    | satara | maharastra | 5546 | 9879891
+ | amu@gmail.com |
++----+-----------+----------+---------+--------+------------+------+------------
+-+---------------+
+1 row in set (0.02 sec)
