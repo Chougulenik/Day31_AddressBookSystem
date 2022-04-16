@@ -173,3 +173,12 @@ mysql> select * from addressbook;
 |  2 | amu       | patil    | Family | pune    | satara | maharastra | 5546 | 9879891     | amu@gmail.com |
 +----+-----------+----------+--------+---------+--------+------------+------+-------------+---------------+
 2 rows in set (0.10 sec)
+
+mysql> select Type, count(firstName) from addressbook group by Type;
++--------+------------------+
+| Type   | count(firstName) |
++--------+------------------+
+| Friend |                1 |
+| Family |                1 |
++--------+------------------+
+2 rows in set (0.08 sec)
