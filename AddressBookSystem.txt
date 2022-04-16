@@ -135,3 +135,41 @@ mysql> select * from addressbook where city = 'satara' ORDER BY firstName ASC;
 +----+-----------+----------+---------+--------+------------+------+------------
 -+---------------+
 1 row in set (0.02 sec)
+
+mysql> alter table addressbook add Type varchar(150) after lastName;
+Query OK, 0 rows affected (6.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook;
++----+-----------+----------+------+---------+--------+------------+------+-----
+--------+---------------+
+| ID | firstName | lastName | Type | address | city   | state      | zip  | phon
+eNumber | email         |
++----+-----------+----------+------+---------+--------+------------+------+-----
+--------+---------------+
+|  1 | nikita    | chougule | NULL | sangli  | sangli | maharastra | 5456 | 4578
+9621    | abc@gmail.com |
+|  2 | amu       | patil    | NULL | pune    | satara | maharastra | 5546 | 9879
+891     | amu@gmail.com |
++----+-----------+----------+------+---------+--------+------------+------+-----
+--------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> update addressbook set Type = "Family" where fisrtName = 'amu';
+ERROR 1054 (42S22): Unknown column 'fisrtName' in 'where clause'
+mysql> update addressbook set Type = "Family" where firstName = 'amu';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressbook set Type = "Friend" where firstName = 'nikita';
+Query OK, 1 row affected (0.17 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++----+-----------+----------+--------+---------+--------+------------+------+-------------+---------------+
+| ID | firstName | lastName | Type   | address | city   | state      | zip  | phoneNumber | email         |
++----+-----------+----------+--------+---------+--------+------------+------+-------------+---------------+
+|  1 | nikita    | chougule | Friend | sangli  | sangli | maharastra | 5456 | 45789621    | abc@gmail.com |
+|  2 | amu       | patil    | Family | pune    | satara | maharastra | 5546 | 9879891     | amu@gmail.com |
++----+-----------+----------+--------+---------+--------+------------+------+-------------+---------------+
+2 rows in set (0.10 sec)
